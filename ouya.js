@@ -1,6 +1,6 @@
-// (function (win) {
-// 	'use strict';
-var win = this;
+(function (win) {
+ 	'use strict';
+
 	var doc = win.document,
 
 		ouya = doc.getElementById('ouya'),
@@ -30,11 +30,11 @@ var win = this;
 		}()),
 
 		transform = (VENDOR_PREFIX !== '') ? '-' + VENDOR_PREFIX + '-transform' : 'transform';
-
+console.log(doc.getElementsByClassName('display')[0]);
 	doc.getElementsByClassName('display')[0].addEventListener('mousemove', function (event) {
 console.log(event.pageX + " - " + transform);
 		ouya.style[transform] = 'rotateX(' + (event.pageY * 2) + 'deg) rotateY(' + (event.pageX / 3) + 'deg) translateZ(-100px)';
 
 	});
 
-// }(this));
+}(this));
