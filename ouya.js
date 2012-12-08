@@ -32,7 +32,7 @@ var win = this;
 		transform = (VENDOR_PREFIX !== '') ? '-' + VENDOR_PREFIX + '-transform' : 'transform';
 
 	doc.getElementsByClassName('display')[0].addEventListener('mousemove', function (event) {
-
+console.log(event.pageX + " - " + transform);
 		ouya.style[transform] = 'rotateX(' + (event.pageY / 2) + 'deg) rotateY(' + (event.pageX / 3) + 'deg) translateZ(-100px)';
 
 	});
