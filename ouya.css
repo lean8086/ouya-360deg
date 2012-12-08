@@ -1,0 +1,284 @@
+.display {
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.75) inset;
+	text-align: center;
+}
+
+#ouya {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 200px;
+	width: 200px;
+	transform-style: preserve-3d;
+	transform: rotateX(-30deg) rotateY(147deg) rotateZ(2deg) translateZ(-100px);
+	perspective-origin: 50% 50%;
+	list-style: none;
+	margin-left: -100px;
+	margin-top: -100px;
+	padding: 0;
+}
+
+#ouya li {
+	width: 200px;
+	position: absolute;
+}
+
+#front,
+#back,
+#left,
+#right {
+	border-bottom-left-radius: 100px;
+	border-bottom-right-radius: 100px;
+	box-shadow: inset -20px 0 50px rgba(0, 0, 0, 0.25);
+	background-color: #D7DAE0;
+	background-image: url('aluminium.jpg');
+	height: 215px;
+}
+
+#front {
+	transform: rotateY(180deg);
+}
+
+#front::after {
+	content: '';
+	display: block;
+	width: 65px;
+	height: 16px;
+	background-image: url('logo.png');
+	background-size: 100%;
+	position: absolute;
+	left: 50%;
+	margin-left: -33px;
+	top: 40px;
+}
+
+#back {
+	transform: translateZ(200px);
+}
+
+#left {
+	transform: rotateY(90deg) translate3d(-100px, 0, -100px);
+}
+
+#right {
+	transform: rotateY(90deg) translate3d(-100px, 0, 100px);
+}
+
+#top {
+	background-color: #222;
+	transform: rotateX(90deg) translate3d(0, 100px, 97px);
+	height: 200px;
+}
+
+#top::before {
+	content: '';
+	display: block;
+	width: 150px;
+	height: 150px;
+	border-radius: 15px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -75px;
+	margin-top: -75px;
+	box-shadow: inset -5px -5px 20px #666, inset 20px 20px 35px #000;
+}
+
+#top::after {
+	content: '';
+	display: block;
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	border: 5px solid #D3DEFE;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -30px;
+	margin-top: -30px;
+	box-shadow: 0 0 50px #1A47FE, inset 0 0 40px #1A47FE;
+}
+
+.screw {
+	width: 10px;
+	height: 10px;
+	background-color: #D7DAE0;
+	border-radius: 100%;
+	position: absolute;
+}
+
+.screw::after {
+	content: '';
+	display: block;
+	width: 6px;
+	height: 6px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -3px;
+	margin-top: -3px;
+	border-radius: 100%;
+	box-shadow: inset -2px -2px 2px #666;
+}
+
+.screw:nth-child(1) {
+	left: 12px;
+	top: 12px;
+}
+
+.screw:nth-child(2) {
+	right: 12px;
+	top: 12px;
+}
+
+.screw:nth-child(3) {
+	left: 12px;
+	bottom: 12px;
+}
+
+.screw:nth-child(4) {
+	right: 12px;
+	bottom: 12px;
+}
+
+#bottom {
+	border-radius: 95px;
+	background-color: #222;
+	height: 200px;
+	width: 200px;
+	position: absolute;
+	transform: rotateX(90deg) translate3d(0px, 100px, -110px);
+}
+
+
+#connectors {
+	width: 150px;
+	height: 40px;
+	background-color: #222;
+	border-radius: 20px;
+	position: absolute;
+	left: 50%;
+	margin-left: -75px;
+	bottom: 32%;
+}
+
+#connectors div {
+	background-color: #000;
+	position: absolute;
+	top: 50%;
+}
+
+#power::after,
+#usb::after,
+#hdmi::after,
+#ethernet::after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 50%;
+	background-color: #666;
+}
+
+#power {
+	width: 15px;
+	height: 15px;
+	left: 12.5px;
+	margin-top: -7.5px;
+	border-radius: 100%;
+}
+
+#power::after {
+	width: 4px;
+	height: 4px;
+	left: 50%;
+	margin-left: -2px;
+	margin-top: -2px;
+	border-radius: 100%;
+}
+
+#usb {
+	width: 12px;
+	height: 30px;
+	left: 50%;
+	margin-left: -6px;
+	margin-top: -15px;
+	border-radius: 2px;
+}
+
+#hdmi {
+	width: 10px;
+	height: 35px;
+	left: 90px;
+	margin-top: -17px;
+	border-top-right-radius: 7px;
+	border-bottom-right-radius: 7px;
+}
+
+#usb::after,
+#hdmi::after {
+	width: 2px;
+	height: 24px;
+	margin-top: -12px;
+	left: 4px;
+}
+
+#ethernet {
+	width: 22px;
+	height: 14px;
+	right: 12px;
+	margin-top: -5px;
+}
+
+#ethernet::after {
+	width: 12px;
+	height: 4px;
+	top: -4px;
+	left: 50%;
+	margin-left: -6px;
+	background-color: #000;
+}
+
+#corners {
+	transform-style: preserve-3d;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: rotateZ(-90deg) translate3d(-100px, -100px, 100px);
+}
+
+.wrapper {
+	transform-style: preserve-3d;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 70px;
+	width: 70px;
+}
+
+.wrapper:nth-child(1) {
+	transform: rotateX(315deg) rotateZ(10deg) translateZ(-44px) translateY(-61px) translateX(-29px);
+}
+
+.wrapper:nth-child(2) {
+	transform: rotateX(45deg) rotateZ(10deg) translateZ(-136px) translateY(-61px) translateX(-29px);
+}
+
+.wrapper:nth-child(3) {
+	transform: rotateX(225deg) rotateZ(10deg) translateZ(-44px) translateY(-152px) translateX(-44px);
+}
+
+.wrapper:nth-child(4) {
+	transform: rotateX(135deg) rotateZ(10deg) translateZ(-136px) translateY(-152px) translateX(-44px);
+}
+
+.corner {
+	background-color: transparent;
+	height: 0;
+	width: 0;
+	border-left: 80px solid #222;
+	border-top: 47px solid transparent;
+	border-bottom: 47px solid transparent;
+	border-radius: 5px;
+	transform: translateX(-15px) translateZ(43px) rotateX(90deg) rotateY(-47deg);
+	transform-origin: 100% 0%;
+}

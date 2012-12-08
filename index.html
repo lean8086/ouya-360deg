@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>OUYA 360º view</title>
+		<link rel="stylesheet" href="http://leanlinares.s3-website-us-east-1.amazonaws.com/shared.css" />
+		<script src="https://raw.github.com/LeaVerou/prefixfree/gh-pages/prefixfree.min.js"></script>
+		<link rel="stylesheet" href="ouya.css" />
+	</head>
+	<body>
+		<header>
+			<h1>OUYA 360º view</h1>
+			<p>3D representation of the OUYA game console built entirely in CSS.</p>
+		</header>
+
+		<div class="display">
+			<ul id="ouya">
+				<li id="front"></li>
+				<li id="back">
+					<div id="connectors">
+						<div id="power"></div>
+						<div id="usb"></div>
+						<div id="hdmi"></div>
+						<div id="ethernet"></div>
+					</div>
+				</li>
+				<li id="left"></li>
+				<li id="right"></li>
+				<li id="top">
+					<div class="screw"></div>
+					<div class="screw"></div>
+					<div class="screw"></div>
+					<div class="screw"></div>
+				</li>
+				<li id="bottom"></li>
+	            <li id="corners">
+				    <div class="wrapper"><div class="corner"></div></div>
+				    <div class="wrapper"><div class="corner"></div></div>
+				    <div class="wrapper"><div class="corner"></div></div>
+				    <div class="wrapper"><div class="corner"></div></div>
+	            </li>
+			</ul>
+		</div>
+
+		<footer>
+			<p>"OUYA is a game console built on Android, where all the games are free-to-play." <a href="http://www.ouya.tv/" target="_blank">http://www.ouya.tv/</a></p>
+			<p>CSS experiment by Leandro Linares <a href="https://twitter.com/lean8086" target="_blank">@lean8086</a></p>
+		</footer>
+
+		<a href="https://github.com/llinares/ouya-360deg" target="_blank">
+			<img src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" class="gh-ribbon" />
+		</a>
+
+		<script src="ouya.js"></script>
+	</body>
+</html>
