@@ -1,6 +1,6 @@
-(function (win) {
-	'use strict';
-
+// (function (win) {
+// 	'use strict';
+var win = this;
 	var doc = win.document,
 
 		ouya = doc.getElementById('ouya'),
@@ -37,4 +37,4 @@
 
 	});
 
-}(this));
+// }(this));
