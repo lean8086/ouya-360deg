@@ -282,13 +282,3 @@
 	transform: translateX(-15px) translateZ(43px) rotateX(90deg) rotateY(-47deg);
 	transform-origin: 100% 0%;
 }
-
-footer {
-	position: relative;
-}
-
-.twitter-share-button {
-	position: absolute;
-	right: 0;
-	top: 0;
-}
