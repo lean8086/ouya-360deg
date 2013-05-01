@@ -2,16 +2,12 @@
     'use strict';
 
     var doc = win.document,
-
         ouya = doc.getElementById('ouya'),
-
         // Based on: http://lea.verou.me/2009/02/find-the-vendor-prefix-of-the-current-browser/
         VENDOR_PREFIX = (function () {
 
             var regex = /^(Webkit|Khtml|Moz|ms|O)(?=[A-Z])/,
-
                 styleDeclaration = doc.getElementsByTagName('script')[0].style,
-
                 prop;
 
             for (prop in styleDeclaration) {
@@ -31,10 +27,8 @@
 
         transform = (VENDOR_PREFIX !== '') ? '-' + VENDOR_PREFIX + '-transform' : 'transform';
 
-    doc.getElementsByClassName('display')[0].addEventListener('mousemove', function (event) {
-
+    win.onmousemove = function (event) {
         ouya.style[transform] = 'rotateX(' + (-event.pageY) + 'deg) rotateY(' + (event.pageX / 3) + 'deg) translateZ(-100px)';
-
-    });
+    }
 
 }(this));
