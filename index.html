@@ -3,15 +3,17 @@
     <head>
         <meta charset="utf-8"/>
         <title>OUYA 360º view</title>
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600"/>
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600" data-noprefix/>
         <script src="https://raw.github.com/LeaVerou/prefixfree/gh-pages/prefixfree.min.js"></script>
         <link rel="stylesheet" href="ouya.css"/>
     </head>
     <body>
-        <h1>OUYA 360º view</h1>
-        <p>3D representation of the OUYA game console built entirely in CSS.</p>
+        <header>
+            <h1>OUYA 360º view</h1>
+            <p>3D representation of the OUYA game console built entirely in CSS.</p>
+        </header>
 
-        <div class="display">
+        <section>
             <ul id="ouya">
                 <li id="front"></li>
                 <li id="back">
@@ -38,15 +40,14 @@
                     <div class="wrapper"><div class="corner"></div></div>
                 </li>
             </ul>
-        </div>
+        </section>
 
-        <aside>
-            <p>Only 2 images were used in this representation: the aluminium pattern and the OUYA logo.</p>
-            <p>Experiment by <a href="http://leanlinares.me">Leandro Linares</a></p>
-        </aside>
+        <aside>Only 2 images were used in this representation: the aluminium pattern and the OUYA logo.</aside>
 
-        <a href="https://github.com/llinares/ouya-360deg" target="_blank">
-            <img src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" class="gh-ribbon" />
+        <footer>Experiment by <a href="http://leanlinares.me">Leandro Linares</a></footer>
+
+        <a href="https://github.com/llinares/ouya-360deg" target="_blank" rel="external">
+            <img src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" id="gh-ribbon"/>
         </a>
 
         <script src="ouya.js"></script>
